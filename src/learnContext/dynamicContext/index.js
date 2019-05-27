@@ -14,7 +14,7 @@ function Toolbar(props){
 class DynamicContext extends Component {
   constructor(props){
     super(props)
-    console.log('in dynamic')
+    
     this.state = {
       theme: themes.light,
     };

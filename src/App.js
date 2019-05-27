@@ -4,7 +4,8 @@ import './App.css';
 import { Link, withRouter } from 'react-router-dom';
 import Routes from "./Routes";
 
-function App() {
+function App({match}) {
+  
   return (
     <div className="App">
       <header className="App-header">

@@ -11,10 +11,10 @@ function Toolbar(props){
   )
 }
 
-class LearnContext extends Component {
+class DynamicContext extends Component {
   constructor(props){
     super(props)
-
+    console.log('in dynamic')
     this.state = {
       theme: themes.light,
     };
@@ -46,4 +46,4 @@ class LearnContext extends Component {
   }
 }
 
-export default LearnContext;
+export default DynamicContext;

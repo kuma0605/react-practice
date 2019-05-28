@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-// import ErrorBoundary from '@/components/ErrorBoundary.js'
+import ErrorBoundary from '@/components/ErrorBoundary.js'
 
 // Theme context，默认的 theme 是 “light” 值
 const ThemeContext = React.createContext('light');
@@ -11,7 +11,7 @@ const UserContext = React.createContext({
 class ConsumeMultiContext extends Component{
   render(){
     const {signedUser, theme} = this.props;
-    
+    console.log(signedUser, theme)
     return (
       <ThemeContext.Provider value={theme}>
         <UserContext.Provider value={signedUser}>
@@ -31,7 +31,9 @@ class ConsumeMultiContext extends Component{
 function Layout(){
   return (
     <div>
-      <Content></Content>
+      <ErrorBoundary>
+        <Content></Content>
+      </ErrorBoundary>
     </div>
   )
 }
@@ -43,7 +45,7 @@ function Content(){
       {theme=>(
         <UserContext.Consumer>
           {user=>(
-            <div>{user?user.name:"none"}:{theme}</div>
+            <div>{user?user.name:'none'}:{theme}</div>
           )}
         </UserContext.Consumer>
       )}

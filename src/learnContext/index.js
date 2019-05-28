@@ -34,8 +34,8 @@ class LearnContext extends Component{
 
         <Route path={`${this.props.match.url}/dynamicContext`} component={DynamicContext} />
         <Route path={`${this.props.match.url}/contextInNestedComponent`} component={contextInNestedComponent} />
-        {/* <Route path={`${this.props.match.url}/consumeMultiContext`} component={ConsumeMultiContext} /> */}
-        <Route path={`${this.props.match.url}/consumeMultiContext`} render={props => <ConsumeMultiContext signedUser={{name:'kuma'}} theme={'dark'} /> } />
+        <Route path={`${this.props.match.url}/consumeMultiContext`} component={ConsumeMultiContext} />
+        {/* <Route path={`${this.props.match.url}/consumeMultiContext`} render={props => <ConsumeMultiContext signedUser={{name:'kuma'}} theme={'dark'} /> } /> */}
       </div>
     )
   }

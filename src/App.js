@@ -13,6 +13,9 @@ function App({match}) {
           <li>
             <Link to='/learnContext'>learn context</Link>
           </li>
+          <li>
+            <Link to='/learnRefs'>learn refs</Link>
+          </li>
         </ul>
       </header>
       <Routes></Routes>

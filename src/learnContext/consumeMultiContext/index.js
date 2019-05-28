@@ -1,4 +1,5 @@
 import React , {Component} from 'react';
+// import ErrorBoundary from '@/components/ErrorBoundary.js'
 
 // Theme context，默认的 theme 是 “light” 值
 const ThemeContext = React.createContext('light');
